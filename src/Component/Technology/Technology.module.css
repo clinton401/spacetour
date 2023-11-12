@@ -1,0 +1,193 @@
+.technology {
+  background-image: url("../../starter-code/assets/technology/background-technology-desktop.jpg");
+  height: 100dvh;
+  width: 100%;
+  background-size: cover;
+  /* border: 1px solid green; */
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-top: 100px;
+  
+  max-height: 900px;
+}
+.technology > * {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  padding: 0;
+ 
+  /* border: 1px solid red; */
+}
+.technology > * > * {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* border: 1px solid red; */
+  justify-content: flex-start;
+  flex-wrap: wrap;
+
+}
+.cleft {
+  padding: 3% 0;
+}
+.cleft > * {
+  width: 70%;
+  /* border: 1px solid green; */
+}
+ .detail {
+    flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
+  /* border: 1px solid blue; */
+}
+.detail article {
+  width: 85%;
+  /* height: 100%; */
+}
+.detail aside {
+  width: 10%;
+  height: 100%;
+}
+.detail li {
+  width: 100%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 1;
+  font-family: "Bellefair", serif;
+  border-radius: 50%;
+  border: 0.1px solid var(--hover);
+}
+.detail li:hover {
+    background-color: var(--white);
+    border: 0.1px solid var(--white);
+    color: var(--dark);
+}
+.detail aside ul {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.technology h3 {
+    padding-bottom: 90px;
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+.technology h3 strong {
+  font-weight: 100;
+  opacity: 0.5;
+  padding-right: 10px;
+}
+.cleft h4 {
+  /* font-family: bell; */
+  /* font-family: "Bellefair", serif; */
+  font-size: 1rem;
+  font-weight: 400;
+  opacity: 0.7;
+  padding-bottom: 5px;
+}
+.cleft p {
+  width: 80%;
+}
+.cleft h2 {
+  font-family: bell;
+  font-size: 2.5rem;
+  padding-bottom: 20px;
+}
+.cright {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+.cright .img1 {
+  width: 65%;
+}
+.img2 {
+    display: none;
+}
+.h322 {
+    display: none
+}
+@media screen and (max-width: 950px) {
+    .technology {
+          background-image: url("../../starter-code/assets/technology/background-technology-tablet.jpg");
+max-height: none;
+padding-top: 80px;
+    }
+    .h311 {
+        display: none;
+
+    }
+    .cright {
+        align-items: flex-start;
+    }
+   .technology .h322 {
+        display: flex;
+        padding-left: 5%;
+        padding-bottom: 50px;
+        /* border: 1px solid red; */
+    }
+    .technology > * {
+        justify-content: flex-end;
+        flex-direction: column-reverse;
+        
+    }
+    .img1 {
+        display: none;
+    }
+    .img2 {
+        display: flex;
+        width: 100%;
+        object-fit: cover;
+    }
+    /* .cri */
+    .cleft, .cright {
+        width: 100%;
+        height: auto;
+        margin: 0;
+        padding-bottom: 30px;
+    }
+    .technology .detail > * {
+        width: 100%;
+        height: auto;
+        /* border: 1px solid red; */
+    }
+    .technology li {
+        max-width: 50px;
+       
+    }
+    .technology aside ul {
+        width: 100%;
+        height: auto;
+        gap: 15px;
+        /* border: 1px solid red; */
+         flex-direction: row;
+         justify-content: center;
+         padding-bottom: 25px;
+    }
+    .technology article > *{
+        width: 100%;
+        text-align: center;
+    }
+}
+@media screen and (max-width: 600px) {
+    
+    .technology .cleft > * {
+        width: 90%;
+    }
+    .technology h2 {
+        font-size: 2rem;
+    }
+    .technology .h322 {
+        padding-left: 0;
+        /* border: 1px solid red; */
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+}

@@ -1,0 +1,146 @@
+.home {
+    background-image: url('../../starter-code/assets/home/background-home-desktop.jpg');
+    height: 100dvh;
+    overflow-y: hidden;
+    width: 100%;
+    padding-top: 100px;
+    display: flex;
+    
+    align-items: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    flex-wrap: wrap;
+    background-position: top;
+}
+.home > * {
+    height: 100%;
+    width: 50%;
+    /* border: 1px solid red; */
+    padding: 0 10%;
+    display: flex;
+    /* position: relative; */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.home h3 {
+    font-weight: 400;
+    font-size: 1.5rem;
+    word-spacing: 3px;
+}
+
+.home h1 {
+    padding: 10px 0;
+    font-size: 7rem;
+    /* font-family: 'Bellefair', serif; */
+    font-family: bell;
+
+}
+.home > div:nth-child(1) * {
+    /* border: 1px solid blue; */
+    width: 100%;
+
+}
+
+.home span {
+    padding: 0px;
+    /* border: 1px solid red; */
+   
+    border-radius: 50%;
+}
+.home span:hover {
+    padding: 50px;
+    transition: 0.5s;
+     background: var(--hover);
+}
+.home img {
+    width: 180px;
+    cursor: pointer;
+    object-fit: cover;
+}
+
+
+@media screen and (max-width: 950px) {
+    .home{
+        background-image: url(../../starter-code/assets/home/background-home-tablet.jpg);
+    }
+    .home > div {
+        width: 100%;
+        /* border: 1px solid red; */
+        height: 50%;
+    }
+    .home span {
+        margin-bottom: 100px;
+    }
+   
+   
+    
+    .home h3 {
+       
+        text-align: center;
+    }
+    .home p {
+        text-align: center;
+    }
+    .home h1 {
+        text-align: center;
+        
+        overflow-x: hidden;
+    }
+    
+}
+@media screen and (max-width: 600px) {
+    .home{
+        background-image: url(../../starter-code/assets/home/background-home-mobile.jpg);
+        /* min-height: 600px; */
+        /* height: auto; */
+        min-height: 700px;
+    }
+    .home > div {
+        width: 100%;
+        /* border: 1px solid red; */
+        height: 50%;
+    }
+     .home span {
+        margin-bottom: 50px;
+        padding: 20px;
+    }
+    .home .expl {
+        font-size: 1.2rem;
+    }
+    .expl::before {
+        width: 160px;
+        
+    }
+    .expl:hover {
+        width: 240px;
+    }
+    .home h3 {
+        font-size: 1.3rem;
+        text-align: center;
+    }
+    .home p {
+        text-align: center;
+    }
+    .home h1 {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        overflow-x: hidden;
+        /* border: 1px solid red; */
+        font-size: 4.5rem;
+        text-wrap: wrap;
+    }
+}
+
+@media screen and (max-width: 250px) {
+    .home h1 {
+        font-size: 2.5rem;
+    }
+    .home span {
+        width: 90%
+    }
+    .home img {
+        width: 100%;
+    }
+}
