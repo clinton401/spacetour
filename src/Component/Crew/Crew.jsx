@@ -2,6 +2,11 @@ import React, { useContext, useState } from "react";
 import css from "./Crew.module.css";
 import { crewContext } from "../../App";
 import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
+import cimg1 from '../../starter-code/assets/crew/image-douglas-hurley.png';
+import cimg2 from '../../starter-code/assets/crew/image-mark-shuttleworth.png';
+import cimg3 from '../../starter-code/assets/crew/image-victor-glover.png';
+import cimg4 from '../../starter-code/assets/crew/image-anousheh-ansari.png';
+
 
 
 function Crew({ loading }) {
@@ -24,7 +29,20 @@ function Crew({ loading }) {
         } else {
             setCount(count - 1);
         }
+  }
+  const imgSelector = () => {
+    switch (count) {
+        case 0:
+                  return cimg1;
+                case 1:
+                  return cimg2;
+                case 2:
+                  return cimg3;
+                case 3:
+                  return cimg4;
+              }
     }
+  
   return (
     <div className={css.crew} id="crew">
       {!loading ? (
@@ -62,11 +80,11 @@ function Crew({ loading }) {
             <h3 className="h32">
               <strong>01</strong>Pick your destination
             </h3>
-            <div id='arrows'>
-            <BsChevronLeft className="arrow-left" onClick={prevHandler} />
-            <BsChevronRight className="arrow-right" onClick={nextHandler} />
+            <div id="arrows">
+              <BsChevronLeft className="arrow-left" onClick={prevHandler} />
+              <BsChevronRight className="arrow-right" onClick={nextHandler} />
             </div>
-            <img src={crews[count].images.png} alt={crews[count].name} />
+            <img src={imgSelector()} alt={crews[count].name} />
           </div>
         </div>
       ) : null}

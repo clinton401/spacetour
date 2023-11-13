@@ -175,7 +175,9 @@ padding-top: 80px;
     }
 }
 @media screen and (max-width: 600px) {
-    
+    .technology {
+         background-image: url("../../starter-code/assets/technology/background-technology-mobile.jpg");
+    }
     .technology .cleft > * {
         width: 90%;
     }

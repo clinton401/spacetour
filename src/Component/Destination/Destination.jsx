@@ -2,7 +2,10 @@ import React, { useContext, useState } from "react";
 import dcss from "./Destination.module.css";
 import { destinationContext } from "../../App";
 import { motion } from "framer-motion";
-
+import dimg1 from '../../starter-code/assets/destination/image-moon.png'
+import dimg2 from '../../starter-code/assets/destination/image-mars.png'
+import dimg3 from '../../starter-code/assets/destination/image-europa.png'
+import dimg4 from '../../starter-code/assets/destination/image-titan.png'
 function Destination({ loading }) {
   const [count, setCount] = useState(0);
   const [classes, setClasses] = useState(0);
@@ -19,13 +22,20 @@ function Destination({ loading }) {
     }
   };
 
-
+  const imgSelector = () => {
+  switch(count) {
+                case 0:
+                  return dimg1;
+                case 1:
+                  return dimg2;
+                case 2:
+                  return dimg3;
+                case 3:
+                  return dimg4;
+              }
+}
   return (
-    <motion.div
-      className={dcss.dest}
-      id="dest"
-     
-    >
+    <motion.div className={dcss.dest} id="dest">
       {!loading ? (
         <div>
           <div className={dcss.dleft}>
@@ -33,10 +43,7 @@ function Destination({ loading }) {
               <strong>01</strong>Pick your destination
             </h3>
 
-            <img
-              src={destinations[count].images.png}
-              alt={destinations[count].name}
-            />
+            <img src={imgSelector()} alt={destinations[count].name} />
           </div>
           <div className={dcss.dright}>
             <div className={dcss.dlinks}>
